@@ -34,3 +34,6 @@ python detector.py 0 #webcam
 python detector.py 0 image.jpg
 python detector.py 0 directiory_with_images
 ```
+## Dataset
+---
+Dataset was downloaded from [Kaggle](https://www.kaggle.com/aditya276/face-mask-dataset-yolo-format) and modified to YOLOv5 format.
