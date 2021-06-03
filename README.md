@@ -31,8 +31,8 @@ python train.py --batch 48 --weights yolov5m.pt --data ../dataset.yaml --epochs 
 ```
 python detector.py 'https://youtu.be/NUsoVlDFqZg'
 python detector.py 0 #webcam
-python detector.py 0 image.jpg
-python detector.py 0 directiory_with_images
+python detector.py image.jpg
+python detector.py directiory_with_images
 ```
 ## Dataset
 ---
