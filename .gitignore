@@ -1,2 +1,4 @@
 # ignore yolov5 folder
 yolov5
+# ignore detection results
+runs

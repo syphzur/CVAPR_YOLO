@@ -1,4 +1,4 @@
-## How to use prepared project
+## Requirements
 ---
 - Install required vesion of [Python](https://www.python.org/) (3.8 or later).
 - Clone this repository.
@@ -15,7 +15,22 @@ cd ./yolov5
 ```
 pip install -r requirements.txt
 ```
-- To train network use script provided in YOLOv5 repository with proper path to dataset.yaml file.
+## Transfer learning
+---
+- To use transfer learning modify the ```train.py``` script provided in YOLOv5 repository to freeze all backbone layers. 
 ```
-python train.py --batch 24 --weights yolov5m.pt --data ../dataset.yaml --epochs 50 --cache --img 512
+freeze = ['model.%s.' % x for x in range(10)] 
+```
+- To train the network use modified script with proper path to dataset.yaml file.
+```
+python train.py --batch 48 --weights yolov5m.pt --data ../dataset.yaml --epochs 50 --cache --img 512
+```
+## Inference
+---
+- To run inference use provided ```detector.py``` script. It can be used with variety of sources: webcam (0 as parameter), image, video, directory or even a YouTube video.
+```
+python detector.py 'https://youtu.be/NUsoVlDFqZg'
+python detector.py 0 #webcam
+python detector.py 0 image.jpg
+python detector.py 0 directiory_with_images
 ```
