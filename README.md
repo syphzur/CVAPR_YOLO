@@ -3,7 +3,7 @@
 - Install required vesion of [Python](https://www.python.org/) (3.8 or later).
 - Clone this repository.
 ```shell
-https://github.com/syphzur/CVAPR_YOLO.git
+git clone https://github.com/syphzur/CVAPR_YOLO.git
 cd ./CVAPR_YOLO
 ```
 - Clone [YOLOv5](https://github.com/ultralytics/yolov5) repository.
