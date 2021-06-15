@@ -27,12 +27,16 @@ python train.py --batch 48 --weights yolov5m.pt --data ../dataset.yaml --epochs 
 ```
 ## Inference
 ---
-- To run inference use provided ```detector.py``` script. It can be used with variety of sources: webcam (0 as parameter), image, video, directory or even a YouTube video.
+- To run inference use ```yolo_detector.py``` script that relies on script provided by Ultralytics. It can be used with variety of sources: webcam (0 as parameter), image, video, directory or even a YouTube video.
 ```
-python detector.py 'https://youtu.be/NUsoVlDFqZg'
-python detector.py 0 #webcam
-python detector.py image.jpg
-python detector.py directiory_with_images
+python yolo_detector.py 'https://youtu.be/NUsoVlDFqZg'
+python yolo_detector.py 0 #webcam
+python yolo_detector.py image.jpg
+python yolo_detector.py directiory_with_images
+```
+- To run inference use without having YOLOv5 repository cloned use ```std_detector.py``` script created with Pytorch. It can be used with image path passed as argument.
+```
+python std_detector.py image.jpg
 ```
 ## Dataset
 ---
